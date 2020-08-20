@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Signup here</h1>
+{% if except %}
+{{  except }}
+{% endif %}
+<form action="{% url 'signup' %}" method='POST'>
+    {% csrf_token %}
+    <input type="text" name="uname" placeholder="username"><br>
+    <input type="email" name="email" placeholder="email"><br>
+    <input type="text" name="fname" placeholder="fname"><br>
+    <input type="text" name="sname" placeholder="sname"><br>
+    <input type="text" name="phone" placeholder="number"><br>
+    <input type="password" name="password" placeholder="password"><br>
+    <input type="password" name="confirm" placeholder="confirmpassword"><br><br>
+    <input type="submit" value="submit">
+</form>
+<a href="{% url 'login' %}">login</a>
+
+</body>
+</html>

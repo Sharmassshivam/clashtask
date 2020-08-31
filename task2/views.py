@@ -47,3 +47,5 @@ def check(request):
         return redirect(login)
 
     return redirect(login)
+def instructions(request):
+    print("hello")
